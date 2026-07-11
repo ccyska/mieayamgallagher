@@ -84,110 +84,103 @@ Terima kasih.`;
   };
 
   return (
-    <section id="menu" className="py-24 bg-[#F6E3C8] relative overflow-hidden">
+    <section
+  id="menu"
+  className="relative overflow-hidden bg-[#F6E3C8] py-16 sm:py-24"
+>
       <Container>
         <div className="text-center mb-14">
-          <h2 className="text-5xl font-bold text-[#3B2A22]">Our Menu</h2>
+         <h2 className="text-4xl sm:text-5xl font-bold text-[#3B2A22]">
+  Our Menu
+</h2>
 
          
         </div>
 
-<div className="mx-auto grid max-w-3xl grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+<div className="mx-auto grid w-full max-w-4xl grid-cols-2 gap-3 sm:gap-6 lg:gap-8 px-1 sm:px-0">
   {menuItems.map((item) => (
     <div
       key={item.id}
-className="
-group
-w-full
-max-w-[170px]
-sm:max-w-[220px]
-md:max-w-[260px]
-lg:max-w-[280px]
-overflow-hidden
-rounded-[22px]
-bg-white
-shadow-lg
-mx-auto
-transition-all
-duration-300
-hover:-translate-y-2
-hover:shadow-2xl
-active:scale-95
-"
+      className="
+        group
+        w-full
+        overflow-hidden
+        rounded-[22px]
+        bg-white
+        shadow-lg
+        transition-all
+        duration-300
+        hover:-translate-y-2
+        hover:shadow-2xl
+        active:scale-95
+      "
     >
-{/* IMAGE */}
-<div
-  className="
-  h-[120px]
-  sm:h-[160px]
-  md:h-[190px]
-  lg:h-[220px]
-  overflow-hidden
-  rounded-t-[22px]
-  bg-[#F7F0E6]
-  flex
-  items-center
-  justify-center
-"
->
-  <Image
-    src={item.image}
-    alt={item.name}
-    width={340}
-    height={340}
-    className="
-      w-full
-      h-full
-      object-cover
-      object-[center_65%]
-      transition-all
-      duration-300
-    "
-  />
-</div>
+      {/* IMAGE */}
+      <div
+        className="
+          h-[155px]
+          sm:h-[190px]
+          md:h-[220px]
+          lg:h-[240px]
+          overflow-hidden
+          rounded-t-[22px]
+          bg-[#F7F0E6]
+        "
+      >
+        <Image
+          src={item.image}
+          alt={item.name}
+          width={500}
+          height={500}
+          className="
+            h-full
+            w-full
+            object-cover
+            object-[center_65%]
+            transition-all
+            duration-300
+          "
+        />
+      </div>
 
       {/* CONTENT */}
-      <div className="px-5 py-4 text-center">
-      
-
-      <h3 className="mt-1 text-base sm:text-lg lg:text-xl font-bold text-[#3B2A22]">
+      <div className="px-3 py-4 text-center sm:px-5">
+        <h3 className="mt-1 text-lg font-bold text-[#3B2A22] sm:text-xl">
           {item.name}
         </h3>
 
-          <p className="text-sm sm:text-base lg:text-lg font-bold text-orange-500">
+        <p className="text-base font-bold text-orange-500 sm:text-lg">
           {formatRupiah(item.price)}
         </p>
 
-<p className="mt-2 text-[11px] sm:text-sm leading-5 text-gray-500 line-clamp-2">
+        <p className="mt-2 line-clamp-2 text-xs leading-5 text-gray-500 sm:text-sm">
           {item.desc}
         </p>
 
         <button
           onClick={() => openOrder(item)}
-        
-  className="
-  mt-4
-  w-full
-  rounded-full
-  bg-[#F07A28]
-  py-2
-  text-xs
-  sm:text-sm
-  font-semibold
-  text-white
-  transition-all
-  duration-300
-  hover:bg-[#DD6D20]
-  group-hover:scale-110
-"
->
-        
+          className="
+            mt-4
+            w-full
+            rounded-full
+            bg-[#F07A28]
+            py-2.5
+            text-sm
+            font-semibold
+            text-white
+            transition-all
+            duration-300
+            hover:bg-[#DD6D20]
+            group-hover:scale-105
+          "
+        >
           Pesan Sekarang
         </button>
       </div>
     </div>
   ))}
 </div>
+  
 
 
       {/* ================= MODAL ================= */}
@@ -198,7 +191,15 @@ active:scale-95
   >
    <div
   onClick={(e) => e.stopPropagation()}
-className="relative w-[75%] max-w-[320px] rounded-[28px] bg-white p-5 shadow-[0_20px_60px_rgba(0,0,0,.18)]" >
+className="
+  relative
+  w-[92%]
+  max-w-[400px]
+  rounded-[28px]
+  bg-white
+  p-6
+  shadow-[0_20px_60px_rgba(0,0,0,.18)]
+" >
       {/* Tombol Close */}
       <button
         onClick={closeOrder}
