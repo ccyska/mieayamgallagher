@@ -97,7 +97,7 @@ Terima kasih.`;
          
         </div>
 
-<div className="mx-auto grid w-full max-w-4xl grid-cols-2 gap-3 sm:gap-6 lg:gap-8 px-1 sm:px-0">
+<div className="mx-auto grid w-full max-w-4xl grid-cols-2 gap-2 sm:gap-6 lg:gap-8">
   {menuItems.map((item) => (
     <div
       key={item.id}
@@ -105,7 +105,7 @@ Terima kasih.`;
         group
         w-full
         overflow-hidden
-        rounded-[22px]
+        rounded-[24px]
         bg-white
         shadow-lg
         transition-all
@@ -118,12 +118,12 @@ Terima kasih.`;
       {/* IMAGE */}
       <div
         className="
-          h-[155px]
-          sm:h-[190px]
-          md:h-[220px]
-          lg:h-[240px]
+          h-[190px]
+          sm:h-[220px]
+          md:h-[240px]
+          lg:h-[260px]
           overflow-hidden
-          rounded-t-[22px]
+          rounded-t-[24px]
           bg-[#F7F0E6]
         "
       >
@@ -144,8 +144,8 @@ Terima kasih.`;
       </div>
 
       {/* CONTENT */}
-      <div className="px-3 py-4 text-center sm:px-5">
-        <h3 className="mt-1 text-lg font-bold text-[#3B2A22] sm:text-xl">
+      <div className="px-3 py-5 text-center sm:px-5">
+        <h3 className="text-lg font-bold text-[#3B2A22] sm:text-xl">
           {item.name}
         </h3>
 
@@ -153,18 +153,18 @@ Terima kasih.`;
           {formatRupiah(item.price)}
         </p>
 
-        <p className="mt-2 line-clamp-2 text-xs leading-5 text-gray-500 sm:text-sm">
+        <p className="mt-3 line-clamp-2 text-[13px] leading-5 text-gray-500 sm:text-sm">
           {item.desc}
         </p>
 
         <button
           onClick={() => openOrder(item)}
           className="
-            mt-4
+            mt-5
             w-full
             rounded-full
             bg-[#F07A28]
-            py-2.5
+            py-3
             text-sm
             font-semibold
             text-white
@@ -185,19 +185,19 @@ Terima kasih.`;
 
       {/* ================= MODAL ================= */}
 {selectedMenu && (
-  <div
-    className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4"
-    onClick={closeOrder}
-  >
+<div
+  className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-2"
+  onClick={closeOrder}
+>
    <div
   onClick={(e) => e.stopPropagation()}
 className="
   relative
-  w-[92%]
-  max-w-[400px]
-  rounded-[28px]
+  w-[96%]
+  max-w-[460px]
+  rounded-[30px]
   bg-white
-  p-6
+  p-7
   shadow-[0_20px_60px_rgba(0,0,0,.18)]
 " >
       {/* Tombol Close */}
