@@ -72,19 +72,20 @@ export default function HeroView() {
               width={1000}
               height={1000}
               priority
-             className="
-w-[360px]
-sm:w-[430px]
-md:w-[520px]
-lg:w-[760px]
-h-auto
-select-none
-transition-all
-duration-500
-ease-out
-hover:scale-[1.04]
-hover:-translate-y-2
-drop-shadow-[0_25px_25px_rgba(0,0,0,.18)]
+           className="
+  w-[120vw]
+  max-w-[480px]
+  sm:w-[500px]
+  md:w-[600px]
+  lg:w-[760px]
+  h-auto
+  select-none
+  transition-all
+  duration-500
+  ease-out
+  hover:scale-[1.04]
+  hover:-translate-y-2
+  drop-shadow-[0_25px_25px_rgba(0,0,0,.18)]
 "
 />
 

@@ -144,22 +144,28 @@ export default function NavbarView() {
             isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div
-            className={`py-4 space-y-3 border-t ${
-              isScrolled ? "border-orange-200/30" : "border-white/20"
-            }`}
+<div
+  className="
+    bg-[#F8E8CF]/80
+    backdrop-blur-2xl
+    backdrop-saturate-150
+    shadow-xl
+    px-4
+    py-4
+  
+  "
+
+
           >
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`block w-full text-left px-4 py-2 text-sm font-medium uppercase tracking-wider transition-colors duration-300 rounded-lg ${
-                  activeSection === item.id
-                    ? "text-orange-500 bg-orange-100/40"
-                    : isScrolled
-                      ? "text-[#2D2D2D] hover:text-orange-500 hover:bg-orange-100/30"
-                      : "text-white hover:text-orange-400 hover:bg-white/10"
-                }`}
+                className={`block w-full rounded-xl px-4 py-3 text-left text-sm font-medium uppercase tracking-wider transition-all duration-300 ${
+  activeSection === item.id
+    ? "bg-white/35 text-orange-500"
+    : "text-[#2D2D2D] hover:bg-white/30 hover:text-orange-500"
+}`}
               >
                 {item.label}
               </button>

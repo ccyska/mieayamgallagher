@@ -253,7 +253,7 @@ className="relative w-[75%] max-w-[320px] rounded-[28px] bg-white p-5 shadow-[0_
           rows={2}
           value={note}
           onChange={(e) => setNote(e.target.value)}
-          placeholder="Contoh: tanpa bawang goreng, kuah dipisah..."
+          placeholder="Contoh: tanpa bawang goreng, kuah banyak..."
           className="mt-2 w-full resize-none rounded-xl border border-gray-300 p-3 text-sm outline-none focus:border-orange-500"
         />
       </div>
